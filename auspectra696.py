@@ -183,20 +183,20 @@ def data_analysis(data_file, plot=True):
         data['Amax'].append(Amax)
 
         # plot each column (cycle in loop)
-        if plot is True:
-            plt.plot(lambdas, abso, linewidth=2, label=sheet1.cell(0, x).value)
-            axes = plt.gca()
-            box = axes.get_position()
-            axes.set_position([box.x0, box.y0, box.width * 0.983, box.height])
-            plt.xlabel('Wavelength (nm)')
-            plt.ylabel('Absorbance')
-            plt.legend(loc='center left', bbox_to_anchor=(1, 0.5), fancybox=True, shadow=True)
-            axes.set_xlim([400, 700])
-            axes.set_ylim([0, Amax + 0.05])
+        plt.plot(lambdas, abso, linewidth=2, label=sheet1.cell(0, x).value)
+        axes = plt.gca()
+        box = axes.get_position()
+        axes.set_position([box.x0, box.y0, box.width * 0.983, box.height])
+        plt.xlabel('Wavelength (nm)')
+        plt.ylabel('Absorbance')
+        plt.legend(loc='center left', bbox_to_anchor=(1, 0.5), fancybox=True, shadow=True)
+        axes.set_xlim([400, 700])
+        axes.set_ylim([0, Amax + 0.05])
 
-    # plt.show()
-    plt.savefig('data/AuPlot.png', format='png', dpi=500)
-    # plt.savefig('data/AuPlot_Correct.png', format='png', dpi=1000)
+    if plot is True:
+        plt.savefig('data/AuPlot.png', format='png', dpi=500)
+
+
 
     # return data['Amax']
     return data

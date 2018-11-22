@@ -65,5 +65,6 @@ class Test_parse_cmdline(unittest.TestCase):
         self.assertTrue(parse_cmdline(test_input)[0]['workbook'] == 'data/LongerTest.xlsx')
 
 
+
 if __name__ == '__main__':
     unittest.main()
