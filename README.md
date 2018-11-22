@@ -1,4 +1,4 @@
-# final696Submit
+# final696Submit-Salwan Butrus
 
 Note: I had to make this repo last minute to submit the project because I messed up some things in git and almost erased all my work.
 Here are the two previous git repos from which I built the final project. 
